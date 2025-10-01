@@ -1,4 +1,9 @@
 <resources>
+    <string name="vanilla">Vanilla</string>
+    <string name="chocolate">Chocolate</string>
+    <string name="red_velvet">Red Velvet</string>
+    <string name="salted_caramel">Salted Caramel</string>
+    <string name="coffee">Coffee</string>
     <string name="choose_flavor">Choose Flavor</string>
     <string name="app_name">CupcakeApp</string>
     <string name="order_cupcakes">Order Cupcakes</string>

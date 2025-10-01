@@ -1,5 +1,6 @@
 package com.example.cupcakeapp
 
+import android.provider.ContactsContract
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
@@ -18,6 +19,7 @@ import androidx.compose.material3.TopAppBarDefaults
 
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.dimensionResource
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
@@ -103,7 +105,10 @@ fun CupcakeApp(
                 )
             }
             composable(route = CupcakeScreen.Flavor.name) {
-                SelectOptionScreen()
+                val context = LocalContext.current
+                SelectOptionScreen(
+                    options = DataSource.flavors.map {id -> context.resources.getString(id) },
+                )
             }
         }
     }
